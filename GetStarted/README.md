@@ -1,6 +1,5 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
 This is my hello world project
 
 This program prints the statemtent "Hello World! Y'all are awesome!" when it is run.
