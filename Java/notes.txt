@@ -1,0 +1,35 @@
+toString()
+toCharArray()
+
+parseInt()      //String to int
+
+char[] ch = {"a", "e", "i", "o", "u"};
+String s1 = String.valueOf(ch);
+String s2 = new String(ch);
+
+
+
+String methods:
+
+.charAt()
+.concat()
+.contains()
+.endsWith()
+.equalsIgnoreCase()
+.getChars() //returns array of chars
+.indexOf()  //first instance of "a" for instance
+.length()
+.trim()
+
+
+Math methods:
+
+.random() //int from 0 to 1
+.max(x,y)
+.min(x,y)
+.pow(x,y) //x^y
+.sqrt()
+.round()
+.ceil()
+.floor()
+.abs()
