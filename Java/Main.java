@@ -21,7 +21,8 @@ public class Main {
             Person newPerson = new Person(name, birthdate, email);
             currentUser = newPerson;
         } else {
-            currentUser = database.getUserData("Jim");
+            // currentUser = database.getUserData("Jim");
+            currentUser = new Person("Jim", "01/01/2000", "jim@Somethinggreat.com");
         }
 
         //Once logged in, main menu appears
@@ -56,16 +57,18 @@ public class Main {
                     
                     break;
                 case "3":
-                    Print("3");
+                    Print("Give the name of a friend you would like to add:");
+                    String friend = scanner.nextLine();
+                    Person newFriend = database.getUserData(friend);
+                    currentUser.addFriend(newFriend);
                     break;
                 case "4":
-                    Print("4");
+                    Print("You have been successfully logged out.");
                     isGoing = false;
             }
                 
         }
         scanner.close();
-        System.out.println("You have been successfully logged out.");
     }
 
     // Condense System.out.println to a method called "Print()"
@@ -73,12 +76,5 @@ public class Main {
         System.out.println(thing);
     }
 
-    public void mainLoop() {
-        
-    }
-    
-    public void newProfile() {
-        
-    }
 
 }
