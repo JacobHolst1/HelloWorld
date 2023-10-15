@@ -9,13 +9,18 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-//    private var RecyclerView tasksRecyclerView;
+
+    private var tasksRecyclerView = RecyclerView(LinearLayoutManager(this))
+    private var tasksAdapter = ToDoAdapter(this)
+    private var taskList = MutableList<ToDoModel>(5,1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +30,30 @@ class MainActivity : AppCompatActivity() {
 
 //        setSupportActionBar(@null)
 
-//        tasksRecyclerView = findViewById<>(R.id.tasksRecyclerView)
-//        tasksRecyclerView.setLayoutManager
+//        taskList = arrayListOf()
+
+        tasksRecyclerView = findViewById<RecyclerView>(R.id.tasksRecyclerView)
+        tasksRecyclerView.setLayoutManager
+        tasksAdapter = ToDoAdapter(this)
+        tasksRecyclerView.setAdapter(tasksAdapter)
+
+        var task = ToDoModel()
+        task.setTask("This is a test task.")
+        task.setStatus(0)
+        task.setId(1)
+
+        taskList.add(task)
+        taskList.add(task)
+        taskList.add(task)
+        taskList.add(task)
+        taskList.add(task)
+
+        tasksAdapter.setTasks(taskList)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
