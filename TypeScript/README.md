@@ -15,12 +15,14 @@ Here's a link to my YouTube demo:
 
 I used Visual Studio Code to write the code.
 
+It is primarily written using TypeScript
+
 # Useful Websites
 
 These sites helped me in learning a lot of the code for this project:
 
 - [w3Schools](https://www.w3schools.com/typescript)
-- [W3Schools](https://www.w3schools.com/java/java_files_create.asp)
+- [Official Site](https://www.typescriptlang.org/)
 
 
 #Future Work
