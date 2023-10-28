@@ -24,6 +24,7 @@ These sites helped me in learning a lot of the code for this project:
 - [w3Schools](https://www.w3schools.com/typescript)
 - [Official Site](https://www.typescriptlang.org/)
 - [DOM Manipulation Guide](https://www.typescriptlang.org/docs/handbook/dom-manipulation.html)
+- [JSX Guide](https://www.typescriptlang.org/docs/handbook/jsx.html)
 
 
 #Future Work

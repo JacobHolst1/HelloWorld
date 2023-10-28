@@ -1,3 +1,4 @@
+import React from "react";
 // 1. Select the div element using the id property
 const app = document.getElementById("app");
 
