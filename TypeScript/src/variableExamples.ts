@@ -1,3 +1,5 @@
+// import * as fs from "fs";
+
 
 // Declare a mutable number
 var number = 1.888
@@ -10,11 +12,11 @@ const enum monthByName {"January" = 1, "February" = 2, "March" = 3, "April" = 4,
 let OctNum = monthByName.October
 
 //Declare a class for a note/entry
-let entry: {
+let entryObj: {
     id: number
     title?: string
-    date?: Date
-} = { id: 1, title: "Untitled" }
+    date: string
+} = { id: 1, title: "Untitled", date:Date()}
 
 // Declare a function for translating date from a number to a month
 function numToDate(num: number | string) {
@@ -22,3 +24,21 @@ function numToDate(num: number | string) {
         
     }
 }
+
+type entry = {
+    words: string
+    date: Date
+}
+
+// Function for returning a title if an entry has one
+function getTitle(id: number): entry | null {
+    return id === 0 ? null : { words: "Today's achievements:", date:new Date()};
+}
+
+let firstTitle = getTitle(0);
+
+console.log(firstTitle?.date.getFullYear());
+console.log(firstTitle?.words);
+
+//open a file using fs
+// const oldWords = fs.readFileSync("./words.txt", "utf-8");
