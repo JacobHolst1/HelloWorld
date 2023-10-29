@@ -10,7 +10,7 @@ about TypeScript, I thought it better to focus on implementing TypeScript into f
 
 Here's a link to my YouTube demo:
 
-[Software Demo Video](link)
+[Software Demo Video](https://youtu.be/SgR9atbPtKE)
 
 # Development Environment
 
