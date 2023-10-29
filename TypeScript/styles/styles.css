@@ -1,0 +1,24 @@
+
+/* colors: 
+primary-color: White;
+secondary-color: #DAF0EE;
+tertiary-color: #94D1BE;
+accent1: #9DB5B2;
+accent2: #3B413C;
+*/
+
+body{
+    background-color: #DAF0EE;
+}
+
+#app{
+    background-color: #9DB5B2;
+    text-align: center;
+    font-size: x-large;
+}
+
+#taskbar{
+    background-color: white;
+    justify-content: center;
+    margin: auto;
+}

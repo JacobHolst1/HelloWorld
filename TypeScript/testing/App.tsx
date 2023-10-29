@@ -1,10 +1,15 @@
 
+
+// DISCLAIMER NOTE:
+// Not actually part of the program, I kept this in for self-learning purposes
+
 type noteType = {
     id: number;
     title?: string;
     noteText: string;
     createAt?: Date;   
 }
+
 
 const myNotesList = [
     {id:1, noteText:"This is some text"},
@@ -13,6 +18,7 @@ const myNotesList = [
 ]
 
 function App() {
+    // const [notesList, setNotesList] = useState(myNotesList as noteType[]);
     return (
         <div className= "App" >
         {/* <TailWindLayout1 title = "" >

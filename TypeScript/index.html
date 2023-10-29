@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NoteTaker12</title>
+    <script defer src="scripts/src/index.js" type="module"></script>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div id="app"></div>
-    <script src="dist/domManip.js"></script>
+    <div id="taskbar">
+        <div id="app"></div>
+        <input type="textbox" id="textbox"/>
+        <button id="submit">New Entry</button>
+    </div>
+    <div id ="NoteSpace">
+        <div class="noteCard"></div>
+    </div>
+    <script src="scripts/src/domManip.js"></script>
 </body>
 </html>
