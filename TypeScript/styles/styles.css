@@ -18,7 +18,24 @@ body{
 }
 
 #taskbar{
-    background-color: white;
+    background-color: #94D1BE;
     justify-content: center;
+    justify-items: center;
     margin: auto;
+}
+
+#headerBox{
+    margin-left: 5em;
+}
+
+#textBox{
+    margin-left: 2em;
+}
+.noteCard{
+    background-color: white;
+    width: 200px;
+    height:200px;
+    display: inline-flex;
+    margin-top: 2em;
+    margin-left: 2em;
 }

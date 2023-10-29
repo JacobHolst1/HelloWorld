@@ -10,3 +10,8 @@ p.textContent = "Create Notes";
 
 // 4. Append the p element to the div element
 app?.appendChild(p);
+
+
+// function newCard() {
+//     document.getElementById("submit")!.addEventListener("click", createCard())
+// }

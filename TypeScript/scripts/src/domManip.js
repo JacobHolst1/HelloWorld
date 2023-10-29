@@ -7,4 +7,7 @@ const p = document.createElement("p");
 p.textContent = "Create Notes";
 // 4. Append the p element to the div element
 app === null || app === void 0 ? void 0 : app.appendChild(p);
+// function newCard() {
+//     document.getElementById("submit")!.addEventListener("click", createCard())
+// }
 //# sourceMappingURL=domManip.js.map

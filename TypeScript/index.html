@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoteTaker12</title>
-    <script defer src="scripts/src/index.js" type="module"></script>
+    <title>Note Taker App</title>
+    <!-- <script defer src="scripts/src/index.jsx" type="module"></script> -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div id="taskbar">
         <div id="app"></div>
-        <input type="textbox" id="textbox"/>
-        <button id="submit">New Entry</button>
+        <input type="textbox" placeholder="Untitled" id="headerBox"/>
+        <input type="textbox" placeholder="Write Here" id="textBox"/>
+        <button id="submit" onclick="createCard">Submit</button>
     </div>
     <div id ="NoteSpace">
         <div class="noteCard"></div>
+        <div class="noteCard"></div>
+        <div class="noteCard"></div>
     </div>
     <script src="scripts/src/domManip.js"></script>
+    <script src="scripts/src/index.jsx"></script>
 </body>
 </html>
