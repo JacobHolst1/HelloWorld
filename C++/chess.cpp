@@ -1,4 +1,5 @@
 #include "interface.h"
+#include "chess.h"
 
 
 int Chess::getPieceColor(char chPiece){
@@ -6,47 +7,57 @@ int Chess::getPieceColor(char chPiece){
             return WHITE_PIECE;
         }
         else{
-            return 1;
+            return BLACK_PIECE;
         }
 }
 
+bool Chess::isWhitePiece(char chPiece)
+{
+   return getPieceColor(chPiece) == Chess::WHITE_PIECE ? true : false;
+}
 
-    // Gives us a description of a piece by its color and type
-    string Chess:: describePiece(char chPiece){
-        string description;
-        if(chPiece == 0){
-            description += "White";
-        }
-        else{
-            description += "Black";
-        }
-        switch (toupper(chPiece))
-        {
-            case 'P':
-                description += "pawn";
-            break;
-            case 'R':
-                description += "rook";
-            break;
-            case 'N':
-                description += "knight";
-            break;
-            case 'B':
-                description += "bishop";
-            break;
-            case 'Q':
-                description += "queen";
-            break;
-            case 'K':
-                description += "king";
-            break;
-        
-            default:
-                description += "unkown piece";
-            break;
-        }
-        return description;
-    }
+bool Chess::isBlackPiece(char chPiece)
+{
+   return getPieceColor(chPiece) == Chess::BLACK_PIECE ? true : false;
+}
+
+
+// Gives us a description of a piece by its color and type
+string Chess:: describePiece(char chPiece){
+   string description;
+   if(chPiece == 0){
+      description += "White";
+   }
+   else{
+      description += "Black";
+   }
+   switch (toupper(chPiece))
+   {
+      case 'P':
+            description += "pawn";
+      break;
+      case 'R':
+            description += "rook";
+      break;
+      case 'N':
+            description += "knight";
+      break;
+      case 'B':
+            description += "bishop";
+      break;
+      case 'Q':
+            description += "queen";
+      break;
+      case 'K':
+            description += "king";
+      break;
+   
+      default:
+            description += "unkown piece";
+      break;
+   }
+   return description;
+}
 
 
 

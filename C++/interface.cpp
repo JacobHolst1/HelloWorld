@@ -1,7 +1,6 @@
 
 #include "chess.cpp"
-
-
+#include "interface.h"
 
 void printLogo(void)
 {
@@ -22,53 +21,53 @@ void printMenu(){
 void printSituation(Game& game)
 {
    // Last moves - print only if at least one move has been made
-//    if ( 0 != game.rounds.size() )
-//    {
-//       cout << "Last moves:\n";
+   if ( 0 != game.rounds.size() )
+   {
+      cout << "Last moves:\n";
 
-//       int iMoves = game.rounds.size();
-//       int iToShow = iMoves >= 5 ? 5 : iMoves;
+      int iMoves = game.rounds.size();
+      int iToShow = iMoves >= 5 ? 5 : iMoves;
 
-//       string space = "";
+      string space = "";
 
-//       while( iToShow-- )
-//       {
-//          if ( iMoves < 10 )
-//          {
-//             // Add an extra hardspace to allign the numbers that are smaller than 10
-//             space = " ";
-//          }
+      while( iToShow-- )
+      {
+         if ( iMoves < 10 )
+         {
+            // Add an extra hardspace to allign the numbers that are smaller than 10
+            space = " ";
+         }
 
-//          cout << space << iMoves << " ..... " <<  game.rounds[iMoves-1].white_move.c_str() << " | " << game.rounds[iMoves - 1].black_move.c_str() << "\n";
-//          iMoves--;
-//       }
+         cout << space << iMoves << " ..... " <<  game.rounds[iMoves-1].white_move.c_str() << " | " << game.rounds[iMoves - 1].black_move.c_str() << "\n";
+         iMoves--;
+      }
 
-//       cout << "\n";
-//    }
+      cout << "\n";
+   }
 
-//    // Captured pieces - print only if at least one piece has been captured
-//    if ( 0 != game.white_captured.size() || 0 != game.black_captured.size() )
-//    {
-//       cout << "---------------------------------------------\n";
-//       cout << "WHITE captured: ";
-//       for (unsigned i = 0; i < game.white_captured.size(); i++)
-//       {
-//          cout << char(game.white_captured[i]) << " ";
-//       }
-//       cout << "\n";
+   // Captured pieces - print only if at least one piece has been captured
+   if ( 0 != game.white_captured.size() || 0 != game.black_captured.size() )
+   {
+      cout << "---------------------------------------------\n";
+      cout << "WHITE captured: ";
+      for (unsigned i = 0; i < game.white_captured.size(); i++)
+      {
+         cout << char(game.white_captured[i]) << " ";
+      }
+      cout << "\n";
 
-//       cout << "black captured: ";
-//       for (unsigned i = 0; i < game.black_captured.size(); i++)
-//       {
-//          cout << char(game.black_captured[i]) << " ";
-//       }
-//       cout << "\n";
+      cout << "black captured: ";
+      for (unsigned i = 0; i < game.black_captured.size(); i++)
+      {
+         cout << char(game.black_captured[i]) << " ";
+      }
+      cout << "\n";
 
-//       cout << "---------------------------------------------\n";
-//    }
+      cout << "---------------------------------------------\n";
+   }
 
-//    // Current turn
-//    cout << "Current turn: " << (game.getCurrentTurn() == Chess::WHITE_PIECE ? "WHITE (upper case)" : "BLACK (lower case)") << "\n\n";
+   // Current turn
+   cout << "Current turn: " << (game.getCurrentTurn() == Chess::WHITE_PIECE ? "WHITE (upper case)" : "BLACK (lower case)") << "\n\n";
 
 }
 
