@@ -4,7 +4,7 @@ This software is a basic version of chess. It includes full functionality for ea
 
 Of the programming languages that I haven't previously had experience with, C++ is by far the one I've heard the most about. So I wanted to make a program that would take enough time and effort to elicit a decently good understanding of how the language works. By way of learning, I'd say that I was very successful with my goal.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/L5Fa5uXjQcU)
 
 # Development Environment
 
