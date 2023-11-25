@@ -1,5 +1,15 @@
-// use dict::{Dict, DictIface};
+use dict::{Dict, DictIface};
 // use std::convert::From;
+
+
+fn load_passwords(){
+    //create a dictionary of strings
+    let mut dict = Dict::<String>::new();
+    assert_eq!( dict.is_empty(), true );
+    assert_eq!( dict.len(), 0 );
+}
+
+//------------------------------------------------------------------------------------------------------------
 
 fn main(){
     let mut name = String::new();
@@ -46,13 +56,20 @@ fn menu() -> bool{
     }
 }
 
+//---------------------------------------------------------------------------------------------------------------------
+
 fn new_password(){
     // Get input from the user for the application/site/whatever linked with the password
-    println!("Welcome to password generator!")
+    println!("Enter the account name to link a password to");
+    let mut input = String::new();
+    let _ = std::io::stdin().read_line(&mut input).unwrap();
 
-    // Input the password. If it isn't very secure, prompt the user if they want to keep it
+    // Input the password. v2.0: If it isn't very secure, prompt the user if they want to keep it
+    println!("Enter the password");
+    let mut input2 = String::new();
+    let _ = std::io::stdin().read_line(&mut input2).unwrap();
 
-
+    println!("Success! The password for {0} is {1}.", input, input2)
 }
 
 fn edit_password(){

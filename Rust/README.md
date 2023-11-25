@@ -1,10 +1,8 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This program allows a user to write, store, and read passwords using text files. It also has a password generator, which will provide the user with a password of a specified length and complexity.
 
-{Provide a description of the software that you wrote to demonstrate the Rust language.}
-
-{Describe your purpose for writing this software.}
+I thought this project would be good for learning the basics of using primitive types in Rust. After my last project in C++, I wanted to keep things a bit more simple to make sure I could effectively build the program one step at a time.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
@@ -12,20 +10,16 @@
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+This project was all written using VS Code.
 
-{Describe the programming language that you used and any libraries.}
+The code is all written in Rust, with some .txt files for storing passwords.
 
 # Useful Websites
-
-{Make a list of websites that you found helpful in this project}
 
 - [Getting Started](https://doc.rust-lang.org/book/ch01-02-hello-world.html)
 - [Web Site Name](http://url.link.goes.here)
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
 
 - Item 1
 - Item 2
