@@ -1,4 +1,5 @@
 // use dict::{Dict, DictIface};
+// use std::convert::From;
 
 fn main(){
     let mut name = String::new();
@@ -35,7 +36,7 @@ fn menu() -> bool{
                     edit_password();
                     return true;
                 },
-        "3" => { println!("You're password today is: schlindikrop15");
+        "3" => { println!("Password length?");
                     generate_password();
                     return true;
                 },
@@ -56,10 +57,31 @@ fn new_password(){
 
 fn edit_password(){
     // Which password do we want to edit?
+    let mut input = String::new();
+    let _ = std::io::stdin().read_line(&mut input).unwrap();
 
     // Make a new password to replace it
+    println!("What will the new password be?");
+    let mut input2 = String::new();
+    let _ = std::io::stdin().read_line(&mut input2).unwrap();
+
+    // Print result
+    println!("The new password for {0} is {1}", input, input2);
 }
 
 fn generate_password(){
+    // Prompt for length of password to generate
+    let mut input = String::new();
+    let _ = std::io::stdin().read_line(&mut input).unwrap();
+    let intput: i32 = input.trim_end().parse().unwrap();
+    
+    // Generate
+    for _ in 1..=intput{
+        print!("a");
+    }
+    println!("Success!");
+
+    // Print the password and prompt for connecting it to an account
+
 
 }
