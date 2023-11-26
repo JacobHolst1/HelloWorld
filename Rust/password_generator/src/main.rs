@@ -4,6 +4,7 @@ use std::fs::File;
 use std::io::prelude::*;
 // use std::io::BufReader;
 // use rand::Rng;
+
 const FILENAME: &str = "pass.txt";
 
 
@@ -92,7 +93,7 @@ fn new_password(){
     println!("Success! The password for {0} is {1}.", input.trim_end(), input2.trim_end())
 
     // TODO Save the password to the text file
-    //
+    //save_password()
 }
 
 fn edit_password(password_str: Option<String>){
